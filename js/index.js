@@ -36,7 +36,7 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+//nav
 let nav = document.querySelector("nav");
 
 nav.children[0].textContent = siteContent.nav["nav-item-1"] 
@@ -46,6 +46,7 @@ nav.children[3].textContent = siteContent.nav["nav-item-4"]
 nav.children[4].textContent = siteContent.nav["nav-item-5"] 
 nav.children[5].textContent = siteContent.nav["nav-item-6"] 
 
+//add two more links
 let navItem1 = document.createElement("a");
 navItem1.setAttribute("href", "#");
 navItem1.textContent = "Login";
@@ -57,10 +58,11 @@ navItem2.textContent = "Sign Up";
 nav.appendChild(navItem1);
 nav.appendChild(navItem2);
 
-Array.from(nav.children).forEach(element => {
+Array.from(nav.children).forEach(element => {//set nav bar text to green
   element.setAttribute("style", "color: green");
 });
 
+//header
 let headerText = document.querySelector(".cta-text h1");
 
 headerText.textContent += "DOM ";
@@ -72,6 +74,7 @@ headerText.textContent += "Awesome";
 document.querySelector(".cta-text button").textContent = siteContent.cta["button"];
 document.querySelector(".cta img").setAttribute("src", siteContent.cta["img-src"]);
 
+//content
 let topContent = document.querySelector(".top-content");
 
 topContent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"];
@@ -93,7 +96,7 @@ bottomContent.children[1].children[1].textContent = siteContent["main-content"][
 bottomContent.children[2].children[0].textContent = siteContent["main-content"]["vision-h4"];
 bottomContent.children[2].children[1].textContent = siteContent["main-content"]["vision-content"];
 
-
+//footer
 document.querySelector(".contact h4").textContent = siteContent["contact"]["contact-h4"];
 document.querySelectorAll(".contact p")[0].textContent = siteContent["contact"]["address"];
 document.querySelectorAll(".contact p")[1].textContent = siteContent["contact"]["phone"];
